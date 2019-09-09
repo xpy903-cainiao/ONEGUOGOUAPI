@@ -50,11 +50,7 @@ class OneGuoUser(models.Model):
 
     def save(self, force_insert=False, force_update=False, using=None,
              update_fields=None):
-        if len(self.password) < 6:
-            return ('密码必须由6-20位字符组成')
-        elif len(self.password) > 20:
-            return ('密码必须由6-20位字符组成')
-        else:
+        if len(self.password) < 20:
             self.password = make_password(self.password)
         super().save()
 

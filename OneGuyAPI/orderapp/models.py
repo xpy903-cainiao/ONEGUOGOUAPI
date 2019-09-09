@@ -36,3 +36,18 @@ class OrderDetailModel(models.Model):
     class Meta:
         db_table = 'OrderDetail'
         verbose_name_plural = verbose_name = '订单详情'
+
+
+class OneGuoComment(models.Model):
+    user_id = models.ForeignKey(OneGuoUser,
+                                on_delete=models.CASCADE,
+                                verbose_name='用户ID')
+    order_id = models.ForeignKey(OrderModel,
+                                 on_delete=models.CASCADE,
+                                 verbose_name='订单ID')
+    comments = models.CharField(max_length=500,
+                                verbose_name='用户评论')
+    class Meta:
+        db_table = 'comments'
+        verbose_name = '用户评论'
+        verbose_name_plural = verbose_name
