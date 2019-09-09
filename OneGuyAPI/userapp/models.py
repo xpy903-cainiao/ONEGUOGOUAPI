@@ -50,11 +50,7 @@ class OneGuoUser(models.Model):
 
     def save(self, force_insert=False, force_update=False, using=None,
              update_fields=None):
-        if len(self.password) < 6:
-            return ('密码必须由6-20位字符组成')
-        elif len(self.password) > 20:
-            return ('密码必须由6-20位字符组成')
-        else:
+        if len(self.password) < 20:
             self.password = make_password(self.password)
         super().save()
 
@@ -66,7 +62,10 @@ class OneGuoUser(models.Model):
 
 class OneGuoAddress(models.Model):
     state = ((0, '公司地址'), (1, '家庭地址'))
-    user_id = models.IntegerField(verbose_name='用户id')
+
+    user_id = models.OneToOneField(OneGuoUser,
+                                   on_delete=models.CASCADE,
+                                   verbose_name='用户id')
     user_addr = models.CharField(max_length=200, verbose_name='用户地址')
     addr_state = models.IntegerField(verbose_name='地址状态', choices=state, default=0)
     user_name = models.CharField(max_length=20, verbose_name='收件人', null=False)
