@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mainapp',
+    'orderapp',
+    'userapp',
+    'goodsapp'
 ]
 
 MIDDLEWARE = [
@@ -124,4 +127,38 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
 ]
 MEDIA_URL = '/media/'
+<<<<<<< HEAD
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+CACHES = {
+    'default':{
+        'BACKEND':'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION':f'{BASE_DIR}/mycache',
+        'TIMEOUT': 300,
+        'OPTIONS':{
+            'MAX_ENTRIES':500,
+            'CULL_FREQUENCY':3
+        }
+    },
+    'html':{
+        'BACKEND':'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION':'unique-snowflake',
+
+    },
+    'default':{
+        'BACKEND':'django_redis.cache.RedisCache',
+        'LOCATION':'redis://10.36.174.61:6379/1',
+        'OPTIONS':{
+            'CLIENT_CLASS':'django_redis.client.DefaultClient',
+            'SOCKET_CONNECT_TIMEOUT': 10,
+            'SOCKET_TIMEOUT': 10,
+        }
+    }
+}
+SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+SESSION_COOKIE_NAME = 'qbuy_session_id'
+SESSION_COOKIE_PATH = '/'
+SESSION_CACHE_ALIAS = 'default'
+SESSION_COOKIE_AGE = 604800
+=======
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+>>>>>>> 8a5c6ef4d9c5b746167b02bf924891891f1fbf07

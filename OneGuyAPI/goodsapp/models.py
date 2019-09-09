@@ -1,3 +1,66 @@
 from django.db import models
-
+from common import YGBaseModel
 # Create your models here.
+class GoodsModelEntity(models.Model):
+    goods_type = models.IntegerField(verbose_name='商品分类')
+    goods_type_info = models.CharField(max_length=20,verbose_name='分类详情')
+    goods_name= models.CharField(max_length=10,verbose_name='商品名称')
+    goods_info = models.CharField(max_length=50,verbose_name='商品描述')
+    goods_price= models.DecimalField(max_digits=10,
+                                     decimal_places=2,
+                                     verbose_name='商品价格')
+    super_price = models.DecimalField(max_digits=10,
+                                      decimal_places=2,
+                                      verbose_name='市场价格')
+    product_address = models.CharField(max_length=30,verbose_name='原产地')
+    info_page= models.ImageField(upload_to='goods',
+                                 verbose_name='详情页图片')
+    goods_sale = models.IntegerField(verbose_name='销量')
+    goods_have = models.IntegerField(verbose_name='库存')
+    info_id = models.IntegerField(verbose_name='详情id')
+    type_id = models.IntegerField(verbose_name='分类id')
+    goods_img= models.ImageField(upload_to='goods',verbose_name='商品图片')
+    is_detail = models.BooleanField(choices=((0,'是'),(1,'否')),
+                                    verbose_name='是否精选图片')
+
+    def __str__(self):
+        return self.goods_name
+
+    class Meta:
+        db_table = 't_goods'
+        verbose_name_plural = verbose_name = '商品表'
+
+class Goods_cartModelEntity(models.Model):
+    user_id = models.IntegerField(verbose_name='用户id')
+    goods_id = models.IntegerField(verbose_name='商品id')
+    goods_count = models.IntegerField(verbose_name='商品数量')
+    is_choice = models.BooleanField(choices=((0,'True'),(1,'False')),
+                                    verbose_name='是否选中')
+    def __str__(self):
+        return self.user_id
+
+    class Meta:
+        db_table = 't_goods_cart'
+        verbose_name_plural = verbose_name = '购物车表'
+
+class Category(YGBaseModel):
+    code = models.CharField(max_length=20)
+    name = models.CharField(max_length=20)
+    grade = models.IntegerField(default=1,
+                                verbose_name='等级')
+    parent = models.ForeignKey('self',on_delete=models.CASCADE)
+    pictrue_url = models.CharField(max_length='',
+                                   verbose_name='',
+                                   blank=True,
+                                   null=True)
+
+
+
+
+
+
+
+
+
+
+
