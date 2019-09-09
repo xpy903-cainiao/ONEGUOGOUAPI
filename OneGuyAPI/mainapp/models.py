@@ -19,14 +19,14 @@ class OneGuoCity(models.Model):
 
 class Navigationmodel(models.Model):
     Navigation_img1 = models.ImageField(verbose_name='导航图片',
-                                        upload_to='goods',blank=True,null=True)
+                                        upload_to='goods', blank=True, null=True)
     Navigation_name = models.CharField(max_length=50,
                                        verbose_name='导航名称')
     Navigation_id = models.IntegerField(verbose_name='导航图片ID', )
 
     class Meta:
         db_table = 't_naviration'
-        verbose_name_plural = verbose_name = '导航图片'
+        verbose_name_plural = verbose_name = '导航'
 
     def __str__(self):
         return self.Navigation_name
@@ -41,15 +41,9 @@ class NavigationInfomodel(models.Model):
     user_id = models.CharField(max_length=30,
                                verbose_name='用户ID')
 
+    def __str__(self):
+        return self.NavigationInfo_name
+
     class Meta:
         db_table = 't_naviration_info'
         verbose_name_plural = verbose_name = '导航详情'
-
-
-    def __str__(self):
-        return self.city_name
-
-
-    class Meta:
-        db_table = 'OneGuoCity'
-        verbose_name_plural = verbose_name = '全国各大城市'
