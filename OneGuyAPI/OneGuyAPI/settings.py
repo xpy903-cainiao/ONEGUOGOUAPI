@@ -76,11 +76,19 @@ WSGI_APPLICATION = 'OneGuyAPI.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
+    'default':{
+        'ENGINE':'django.db.backends.mysql',
+        'NAME':'xiangmu',
+        'HOST':'10.36.174.61',
+        'PORT':3306,
+        'USER':'root',
+        'PASSWORD':'root',
+        'CHARSET':'utf8',}
     }
-}
 
 
 # Password validation
@@ -125,3 +133,33 @@ STATICFILES_DIRS =  [
 ]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+CACHES = {
+    'file':{
+        'BACKEND':'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION':f'{BASE_DIR}/mycache',
+        'TIMEOUT': 300,
+        'OPTIONS':{
+            'MAX_ENTRIES':500,
+            'CULL_FREQUENCY':3
+        }
+    },
+    'html':{
+        'BACKEND':'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION':'unique-snowflake',
+
+    },
+    'default':{
+        'BACKEND':'django_redis.cache.RedisCache',
+        'LOCATIONS':'redis://10.36.174.61:6379/1',
+        'OPTIONS':{
+            'CLIENT_CLASS':'django_redis.client.DefaultClient',
+            'SOCKET_CONNECT_TIMEOUT': 10,
+            'SOCKENT_TIMEOUT': 10,
+        }
+    }
+}
+SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+SESSION_COOKIE_NAME = 'qbuy_session_id'
+SESSION_COOKIE_PATH = '/'
+SESSION_CACHE_ALIAS = 'default'
+SESSION_COOKIE_AGE = 604800
