@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d31eba0-3cca-4151-bbb5-bc11aa153309" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/goodsapp/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orderapp/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneGuyAPI/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/OneGuyAPI/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneGuyAPI/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/OneGuyAPI/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="7d31eba0-3cca-4151-bbb5-bc11aa153309" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +128,7 @@
       <workItem from="1567998357534" duration="551000" />
       <workItem from="1567998947347" duration="159000" />
       <workItem from="1567999113825" duration="3678000" />
+      <workItem from="1568008108310" duration="486000" />
     </task>
     <task id="LOCAL-00001" summary="用户表">
       <created>1568001210573</created>
@@ -160,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568008054798</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="用户表">
+      <created>1568008132715</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568008132715</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
