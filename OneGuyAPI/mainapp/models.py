@@ -10,6 +10,9 @@ class address(models.Model):
     user_name = models.CharField(max_length=20, verbose_name='收件人', null=False)
     phone = models.IntegerField(max_length=20, verbose_name='联系电话', null=False)
 
+    def __str__(self):
+        return self.user_addr
+
     class Meta:
         db_table = 'address'
         verbose_name_plural = verbose_name = '收货地址'
@@ -21,6 +24,9 @@ class city(models.Model):
     city_name = models.CharField(max_length=60, verbose_name='城市名称')
     is_hot = models.CharField(verbose_name='是否热门', choices=hot, default=1)
     py_name = models.CharField(max_length=50, verbose_name='城市拼音名')
+
+    def __str__(self):
+        return self.city_name
 
     class Meta:
         db_table = 'city'
