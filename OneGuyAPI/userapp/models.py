@@ -21,7 +21,7 @@ class OneGuoUser(models.Model):
                               verbose_name='性别',
                               choices=sex,
                               default='woman',
-                              null=True)    # 默认女 True 男 False
+                              null=True)  # 默认女 True 男 False
     password = models.CharField(max_length=20,
                                 verbose_name='用户密码',
                                 null=True)
@@ -58,9 +58,23 @@ class OneGuoUser(models.Model):
             self.password = make_password(self.password)
         super().save()
 
-
-
     class Meta:
         db_table = 'users'
         verbose_name = '用户表'
         verbose_name_plural = verbose_name
+
+
+class address(models.Model):
+    state = ((0, '公司地址'), (1, '家庭地址'))
+    user_id = models.IntegerField(max_length=50, verbose_name='用户id')
+    user_addr = models.CharField(max_length=200, verbose_name='用户地址')
+    addr_state = models.IntegerField(verbose_name='地址状态', choices=state, default=0)
+    user_name = models.CharField(max_length=20, verbose_name='收件人', null=False)
+    phone = models.IntegerField(max_length=20, verbose_name='联系电话', null=False)
+
+    def __str__(self):
+        return self.user_addr
+
+    class Meta:
+        db_table = 'address'
+        verbose_name_plural = verbose_name = '收货地址'
