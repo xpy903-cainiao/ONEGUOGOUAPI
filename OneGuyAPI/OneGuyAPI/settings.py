@@ -80,9 +80,15 @@ WSGI_APPLICATION = 'OneGuyAPI.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'xiangmu',
+        'HOST':'10.36.174.61',
+        'PORT':3306,
+        'USER':'root',
+        'PASSWORD':'root',
+        'CHARSET':'utf8',
+    },
+
 }
 
 
@@ -127,7 +133,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
 ]
 MEDIA_URL = '/media/'
-<<<<<<< HEAD
+
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 CACHES = {
     'default':{
@@ -159,6 +165,5 @@ SESSION_COOKIE_NAME = 'qbuy_session_id'
 SESSION_COOKIE_PATH = '/'
 SESSION_CACHE_ALIAS = 'default'
 SESSION_COOKIE_AGE = 604800
-=======
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
->>>>>>> 8a5c6ef4d9c5b746167b02bf924891891f1fbf07
+

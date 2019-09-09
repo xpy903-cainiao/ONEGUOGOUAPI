@@ -43,16 +43,16 @@ class Goods_cartModelEntity(models.Model):
         db_table = 't_goods_cart'
         verbose_name_plural = verbose_name = '购物车表'
 
-class Category(YGBaseModel):
-    code = models.CharField(max_length=20)
-    name = models.CharField(max_length=20)
-    grade = models.IntegerField(default=1,
-                                verbose_name='等级')
-    parent = models.ForeignKey('self',on_delete=models.CASCADE)
-    pictrue_url = models.CharField(max_length='',
-                                   verbose_name='',
-                                   blank=True,
-                                   null=True)
+# class Category(YGBaseModel):
+#     code = models.CharField(max_length=20)
+#     name = models.CharField(max_length=20)
+#     grade = models.IntegerField(default=1,
+#                                 verbose_name='等级')
+#     parent = models.ForeignKey('self',on_delete=models.CASCADE)
+#     pictrue_url = models.CharField(max_length='',
+#                                    verbose_name='',
+#                                    blank=True,
+#                                    null=True)
 
 
 

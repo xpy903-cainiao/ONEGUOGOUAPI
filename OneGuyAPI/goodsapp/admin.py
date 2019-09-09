@@ -14,4 +14,4 @@ class Goods_cartModelAdmin(admin.ModelAdmin):
     list_display = ('user_id','goods_id','goods_count','is_choice')
 
 admin.site.register(models.GoodsModelEntity,GoodsModelAdmin)
-admin.site.register(models.Goods_cartModelEntity,GoodsModelAdmin)
+admin.site.register(models.Goods_cartModelEntity,Goods_cartModelAdmin)
