@@ -1,5 +1,6 @@
 from django.contrib import admin
 from goodsapp import models
+from .models import Category
 
 # Register your models here.
 class GoodsModelAdmin(admin.ModelAdmin):
@@ -13,5 +14,13 @@ class GoodsModelAdmin(admin.ModelAdmin):
 class Goods_cartModelAdmin(admin.ModelAdmin):
     list_display = ('user_id','goods_id','goods_count','is_choice')
 
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('id','name','code','picture_url','grade','parent_id')
+    fields = ('name','code','picture_url','parent','grade')
+    search_fields = ('code','name')
+
+
 admin.site.register(models.GoodsModelEntity,GoodsModelAdmin)
 admin.site.register(models.Goods_cartModelEntity,Goods_cartModelAdmin)
+admin.site.register(Category,CategoryAdmin)
