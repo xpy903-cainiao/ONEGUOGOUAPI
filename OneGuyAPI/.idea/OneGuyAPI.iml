@@ -14,11 +14,7 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-<<<<<<< HEAD
-    <orderEntry type="jdk" jdkName="Python 3.7 (QBuyPro)" jdkType="Python SDK" />
-=======
-    <orderEntry type="jdk" jdkName="Python 3.6.0 (D:\Python3.6\python.exe)" jdkType="Python SDK" />
->>>>>>> ccd5ad33554c515af07a39a225123d3c011d3b57
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">

@@ -1,10 +1,6 @@
 from django.db import models
 from common import YGBaseModel
-<<<<<<< HEAD
-
-=======
 from userapp.models import OneGuoUser
->>>>>>> ccd5ad33554c515af07a39a225123d3c011d3b57
 # Create your models here.
 class GoodsModelEntity(models.Model):
     goods_type = models.IntegerField(verbose_name='商品分类')
