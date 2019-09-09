@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-from OneGuyAPI.userapp.models import OneGuoUser, address
+from OneGuyAPI.userapp.models import OneGuoUser, OneGuoAddress
 
 
 class OrderModel(models.Model):
@@ -13,7 +13,7 @@ class OrderModel(models.Model):
     order_price = models.FloatField(verbose_name='总价格')
     order_time = models.DateTimeField(auto_now=True, verbose_name='下单时间')
     order_state = models.CharField(max_length=100, choices=order_STATE, default=0, verbose_name='订单状态')
-    address_id = models.ForeignKey(address, on_delete=models.CASCADE, verbose_name='地址ID')
+    address_id = models.ForeignKey(OneGuoAddress, on_delete=models.CASCADE, verbose_name='地址ID')
 
     def __str__(self):
         return self.order_id

@@ -64,7 +64,7 @@ class OneGuoUser(models.Model):
         verbose_name_plural = verbose_name
 
 
-class address(models.Model):
+class OneGuoAddress(models.Model):
     state = ((0, '公司地址'), (1, '家庭地址'))
     user_id = models.IntegerField(max_length=50, verbose_name='用户id')
     user_addr = models.CharField(max_length=200, verbose_name='用户地址')
@@ -76,5 +76,5 @@ class address(models.Model):
         return self.user_addr
 
     class Meta:
-        db_table = 'address'
+        db_table = 'OneGuoAddress'
         verbose_name_plural = verbose_name = '收货地址'
