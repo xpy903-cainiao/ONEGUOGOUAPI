@@ -1,5 +1,6 @@
 from django.db import models
 from common import YGBaseModel
+from userapp.models import OneGuoUser
 # Create your models here.
 class GoodsModelEntity(models.Model):
     goods_type = models.IntegerField(verbose_name='商品分类')
@@ -31,8 +32,10 @@ class GoodsModelEntity(models.Model):
         verbose_name_plural = verbose_name = '商品表'
 
 class Goods_cartModelEntity(models.Model):
-    user_id = models.IntegerField(verbose_name='用户id')
-    goods_id = models.IntegerField(verbose_name='商品id')
+    user_id = models.OneToOneField(OneGuoUser,verbose_name='用户id',on_delete=models.CASCADE)
+    goods_id = models.ForeignKey(GoodsModelEntity,
+                                 on_delete=models.CASCADE,
+                                 verbose_name='商品id')
     goods_count = models.IntegerField(verbose_name='商品数量')
     is_choice = models.BooleanField(choices=((0,'True'),(1,'False')),
                                     verbose_name='是否选中')

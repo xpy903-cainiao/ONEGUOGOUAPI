@@ -48,8 +48,3 @@ class NavigationInfomodel(models.Model):
 
     def __str__(self):
         return self.city_name
-
-
-    class Meta:
-        db_table = 'OneGuoCity'
-        verbose_name_plural = verbose_name = '全国各大城市'
