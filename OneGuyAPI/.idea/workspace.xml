@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d31eba0-3cca-4151-bbb5-bc11aa153309" name="Default Changelist" comment="">
+    <list default="true" id="7d31eba0-3cca-4151-bbb5-bc11aa153309" name="Default Changelist" comment="用户表">
       <change afterPath="$PROJECT_DIR$/goodsapp/urls.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/orderapp/urls.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
@@ -60,7 +60,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PATH_TO_GIT" value="G:\应用\Gitbash\Git\cmd\git.exe" />
+    <option name="PATH_TO_GIT" value="D:\Gitbash\Git\cmd\git.exe" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -71,7 +71,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="G:/应用/Gitbash/Git/cmd/git.exe" />
+    <property name="last_opened_file_path" value="D:/Gitbash/Git/cmd/git.exe" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -137,8 +137,16 @@
       <workItem from="1567988739294" duration="538000" />
       <workItem from="1567998357534" duration="551000" />
       <workItem from="1567998947347" duration="159000" />
-      <workItem from="1567999113825" duration="1963000" />
+      <workItem from="1567999113825" duration="2828000" />
     </task>
+    <task id="LOCAL-00001" summary="用户表">
+      <created>1568001210573</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568001210573</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,5 +164,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="用户表" />
+    <option name="LAST_COMMIT_MESSAGE" value="用户表" />
   </component>
 </project>
