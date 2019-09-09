@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mainapp',
+    'orderapp',
+    'userapp',
+    'goodsapp'
 ]
 
 MIDDLEWARE = [
@@ -134,7 +137,7 @@ STATICFILES_DIRS =  [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 CACHES = {
-    'file':{
+    'default':{
         'BACKEND':'django.core.cache.backends.filebased.FileBasedCache',
         'LOCATION':f'{BASE_DIR}/mycache',
         'TIMEOUT': 300,
@@ -150,11 +153,11 @@ CACHES = {
     },
     'default':{
         'BACKEND':'django_redis.cache.RedisCache',
-        'LOCATIONS':'redis://10.36.174.61:6379/1',
+        'LOCATION':'redis://10.36.174.61:6379/1',
         'OPTIONS':{
             'CLIENT_CLASS':'django_redis.client.DefaultClient',
             'SOCKET_CONNECT_TIMEOUT': 10,
-            'SOCKENT_TIMEOUT': 10,
+            'SOCKET_TIMEOUT': 10,
         }
     }
 }
