@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-from userapp.helper import make_password
+from .helper import make_password
 
 
 class OneGuoUser(models.Model):
