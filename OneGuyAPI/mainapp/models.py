@@ -49,5 +49,5 @@ class NavigationInfomodel(models.Model):
         db_table = 't_naviration_info'
         verbose_name_plural = verbose_name = '导航详情'
 
-        return self.city_name
+
 
