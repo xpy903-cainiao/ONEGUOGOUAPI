@@ -48,11 +48,11 @@ class OneGuoUser(models.Model):
     def __str__(self):
         return self.name
 
-    def save(self, force_insert=False, force_update=False, using=None,
-             update_fields=None):
-        if len(self.password) < 20:
-            self.password = make_password(self.password)
-        super().save()
+    # def save(self, force_insert=False, force_update=False, using=None,
+    #          update_fields=None):
+    #     if len(self.password) < 20:
+    #         self.password = make_password(self.password)
+    #     super().save()
 
     class Meta:
         db_table = 'users'

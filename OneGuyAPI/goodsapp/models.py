@@ -1,5 +1,4 @@
 from django.db import models
-from common import YGBaseModel
 from userapp.models import OneGuoUser
 # Create your models here.
 class GoodsModelEntity(models.Model):
@@ -40,16 +39,16 @@ class Goods_cartModelEntity(models.Model):
                                  on_delete=models.CASCADE,
                                  verbose_name='商品id')
     goods_count = models.IntegerField(verbose_name='商品数量')
-    is_choice = models.BooleanField(choices=((0,'True'),(1,'False')),
-                                    verbose_name='是否选中')
+    is_choice = models.IntegerField(verbose_name='是否选中',default=0,
+                                    choices=((0,'True'),(1,'False')))
     def __str__(self):
-        return self.user_id
+        return '购物车添加成功'
 
     class Meta:
         db_table = 't_goods_cart'
         verbose_name_plural = verbose_name = '购物车表'
 
-class Category(YGBaseModel):
+class Category(models.Model):
     code = models.CharField(max_length=20,
                             verbose_name='编码')
     name = models.CharField(max_length=20,

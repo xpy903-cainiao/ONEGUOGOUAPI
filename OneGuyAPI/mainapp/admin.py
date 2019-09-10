@@ -7,7 +7,7 @@ from .models import OneGuoCity, Navigationmodel, NavigationInfomodel
 
 class OneGuoCityAdmin(admin.ModelAdmin):
     list_display = ('city_id', 'city_name', 'is_hot', 'py_name')
-    fields = ('city_name', 'is_hot', 'py_name')
+    fields = ('city_id','city_name', 'is_hot', 'py_name')
     search_fields = ('city_name', 'py_name', 'is_hot')
 
 
