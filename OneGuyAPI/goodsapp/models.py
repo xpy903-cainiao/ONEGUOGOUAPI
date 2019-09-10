@@ -15,12 +15,15 @@ class GoodsModelEntity(models.Model):
                                       verbose_name='市场价格')
     product_address = models.CharField(max_length=30,verbose_name='原产地')
     info_page= models.ImageField(upload_to='goods',
-                                 verbose_name='详情页图片')
+                                 verbose_name='详情页图片',
+                                 null=True,
+                                 blank=True)
     goods_sale = models.IntegerField(verbose_name='销量')
     goods_have = models.IntegerField(verbose_name='库存')
     info_id = models.IntegerField(verbose_name='详情id')
     type_id = models.IntegerField(verbose_name='分类id')
-    goods_img= models.ImageField(upload_to='goods',verbose_name='商品图片')
+    goods_img= models.ImageField(upload_to='goods',verbose_name='商品图片',
+                                 blank=True,null=True)
     is_detail = models.BooleanField(choices=((0,'是'),(1,'否')),
                                     verbose_name='是否精选图片')
 

@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import OneGuoUser
+from .models import OneGuoUser,OneGuoAddress
 
 
 class OneGuoUserAdmin(admin.ModelAdmin):
@@ -29,5 +29,8 @@ class OneGuoUserAdmin(admin.ModelAdmin):
         'is_delete')
     search_fields = ('phone', 'name', 'idcard', 'is_active', 'is_delete')
 
+class OneGuoAddressAdmin(admin.ModelAdmin):
+    list_display = ('user_id','user_addr','addr_state','user_name','phone')
 
 admin.site.register(OneGuoUser, OneGuoUserAdmin)
+admin.site.register(OneGuoAddress, OneGuoAddressAdmin)

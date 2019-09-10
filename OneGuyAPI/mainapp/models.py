@@ -6,7 +6,7 @@ class OneGuoCity(models.Model):
     hot = ((0, '热门'), (1, '非热门'))
     city_id = models.IntegerField(verbose_name='城市id', primary_key=True)
     city_name = models.CharField(max_length=60, verbose_name='城市名称')
-    is_hot = models.CharField(max_length=10, verbose_name='是否热门', choices=hot, default=1)
+    is_hot = models.IntegerField(max_length=10, verbose_name='是否热门', choices=hot, default=1)
     py_name = models.CharField(max_length=50, verbose_name='城市拼音名')
 
     class Meta:
