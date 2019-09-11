@@ -137,7 +137,7 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 CACHES = {
-    'default':{
+    'file':{
         'BACKEND':'django.core.cache.backends.filebased.FileBasedCache',
         'LOCATION':f'{BASE_DIR}/mycache',
         'TIMEOUT': 300,
