@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'mainapp',
     'orderapp',
     'userapp',
-    'goodsapp'
+    'goodsapp',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
