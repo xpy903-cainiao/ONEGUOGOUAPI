@@ -11,10 +11,9 @@
         <input name="password" type="password" placeholder="口令"><br><br>
 
         <button class="btn btn-primary">登录</button>
-        <button class="btn btn-primary" href="register.html">注册</button>
+        <input type="button" name="reg" value="注册" onclick="document.location.href='register'">
 
     </form>
-    <p></p>
     <p style="color:red;">
         {{ error_msg }}
     </p>
