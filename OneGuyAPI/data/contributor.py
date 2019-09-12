@@ -28,6 +28,5 @@ with open('category.json',encoding='utf-8') as f:
     sql = 'INSERT INTO t_category(id,code,name,grade,picture_url,parent_id) VALUES '
 
     sub_str = get_category(all_category)
-    print(sub_str)
     with open('catetory.sql', 'w', encoding='utf-8') as sql_f:
         sql_f.write(sql+'\n'+sub_str)
