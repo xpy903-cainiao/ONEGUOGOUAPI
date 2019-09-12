@@ -1,11 +1,6 @@
 from django.db import models
 
 # Create your models here.
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
-
 
 class OneGuoUser(models.Model):
     level = (('0', '大众会员'),
