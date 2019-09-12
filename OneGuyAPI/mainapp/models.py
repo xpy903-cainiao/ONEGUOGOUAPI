@@ -42,12 +42,8 @@ class NavigationInfomodel(models.Model):
                                verbose_name='用户ID')
 
     def __str__(self):
-
         return self.NavigationInfo_name
 
     class Meta:
         db_table = 't_naviration_info'
         verbose_name_plural = verbose_name = '导航详情'
-
-
-

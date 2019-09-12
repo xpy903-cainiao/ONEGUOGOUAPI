@@ -23,7 +23,7 @@ class LoginView(View):
         return render(request, 'login.html')
 
     def post(self, request):
-        error_msg = '用户名或口令出错'
+        error_msg = '用户名或密码错误'
         name = request.POST.get('name', None)
         password = request.POST.get('password', None)
 
@@ -44,7 +44,7 @@ class LoginView(View):
         return render(request, 'login.html', locals())
 
 
-# 登出页面
+
 def logout(request):
     request.session.clear()
     # request.session.flush()

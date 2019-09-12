@@ -131,31 +131,31 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'static')
+    os.path.join(BASE_DIR, 'static')
 ]
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 CACHES = {
-    'file':{
-        'BACKEND':'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION':f'{BASE_DIR}/mycache',
+    'file': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': f'{BASE_DIR}/mycache',
         'TIMEOUT': 300,
-        'OPTIONS':{
-            'MAX_ENTRIES':500,
-            'CULL_FREQUENCY':3
+        'OPTIONS': {
+            'MAX_ENTRIES': 500,
+            'CULL_FREQUENCY': 3
         }
     },
-    'html':{
-        'BACKEND':'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION':'unique-snowflake',
+    'html': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'unique-snowflake',
 
     },
-    'default':{
-        'BACKEND':'django_redis.cache.RedisCache',
-        'LOCATION':'redis://10.36.174.61:6379/1',
-        'OPTIONS':{
-            'CLIENT_CLASS':'django_redis.client.DefaultClient',
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://10.36.174.61:6379/1',
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
             'SOCKET_CONNECT_TIMEOUT': 10,
             'SOCKET_TIMEOUT': 10,
         }
