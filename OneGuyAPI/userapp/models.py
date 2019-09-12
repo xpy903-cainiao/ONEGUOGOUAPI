@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-from .helper import make_password
+
 
 
 class OneGuoUser(models.Model):
@@ -35,15 +35,18 @@ class OneGuoUser(models.Model):
     balance = models.FloatField(verbose_name='账户余额',
                                 default=0.0,
                                 null=True)
-    use_level = models.CharField(max_length=20,
-                                 choices=level,
-                                 verbose_name='用户等级',
-                                 default=0,
-                                 null=True)
+    use_level = models.IntegerField(choices=level,
+                                    verbose_name='用户等级',
+                                    default=0,
+                                    null=True)
     is_active = models.BooleanField(verbose_name='是否激活',
                                     default=False)
     is_delete = models.BooleanField(verbose_name='是否删除',
                                     default=False)
+    email = models.CharField(max_length=20,
+                             null=True,
+                             blank=True,
+                             verbose_name='邮箱')
 
     def __str__(self):
         return self.name

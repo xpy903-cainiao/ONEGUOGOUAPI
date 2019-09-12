@@ -5,8 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/ONEGOUAPP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ONEGOUAPP.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneGuyAPI/mainapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/OneGuyAPI/mainapp/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneGuyAPI/mainapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/OneGuyAPI/mainapp/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +32,9 @@
   <component name="ProjectId" id="1Qan1OaNPdxNtR7Q77zB89a5r0b" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/OneGuyAPI/templates" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -73,6 +72,7 @@
       <workItem from="1567836952476" duration="168000" />
       <workItem from="1567837123661" duration="4993000" />
       <workItem from="1568017361478" duration="1160000" />
+      <workItem from="1568251265486" duration="256000" />
     </task>
     <servers />
   </component>
@@ -84,7 +84,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
