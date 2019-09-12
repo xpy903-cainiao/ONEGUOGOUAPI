@@ -1,16 +1,17 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 655a439f66c130bd3f6a798490be3ba05a80f695
 {% extends 'base.html' %}
-
-
 {% block content %}
-
     <h3>用户登录页面</h3>
     <form method="post">
-        {% csrf_token %}
-        <input name="phone" placeholder="请输入账号">
-        <br><br>
-        <input name="password" type="password" placeholder="请输入密码"><br><br>
+    {% csrf_token %}
+    <input name="phone" placeholder="请输入账号">
+    <br><br>
+    <input name="password" type="password" placeholder="请输入密码"><br><br>
 
+<<<<<<< HEAD
         <button class="btn btn-primary">登录</button>
         <button class="btn btn-primary" href="register.html">注册</button>
 <!DOCTYPE html>
@@ -23,6 +24,21 @@
 </head>
 <body>
 <h3>用户登陆</h3>
+=======
+    <button class="btn btn-primary">登录</button>
+    <button class="btn btn-primary" href="register.html">注册</button>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>登陆</title>
+    </head>
+    <body>
+    <h3>用户登陆</h3>
+>>>>>>> 655a439f66c130bd3f6a798490be3ba05a80f695
     <form method="post">
         {% csrf_token %}
         <input name="name" placeholder="账号">
@@ -30,14 +46,23 @@
         <input name="password" type="password" placeholder="口令"><br><br>
 
         <button class="btn btn-primary">登录</button>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 655a439f66c130bd3f6a798490be3ba05a80f695
     </form>
     <p></p>
     <p style="color:red;">
         {{ error_msg }}
     </p>
+<<<<<<< HEAD
 
 {% endblock %}
 </body>
 </html>
 
+=======
+{% endblock %}
+</body>
+</html>
+>>>>>>> 655a439f66c130bd3f6a798490be3ba05a80f695
