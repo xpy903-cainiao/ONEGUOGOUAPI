@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {% extends 'base.html' %}
 
 
@@ -12,10 +13,34 @@
 
         <button class="btn btn-primary">登录</button>
         <button class="btn btn-primary" href="register.html">注册</button>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>登陆</title>
+</head>
+<body>
+<h3>用户登陆</h3>
+    <form method="post">
+        {% csrf_token %}
+        <input name="name" placeholder="账号">
+        <br><br>
+        <input name="password" type="password" placeholder="口令"><br><br>
+
+        <button class="btn btn-primary">登录</button>
+>>>>>>> Stashed changes
 
     </form>
     <p></p>
     <p style="color:red;">
         {{ error_msg }}
     </p>
+<<<<<<< Updated upstream
 {% endblock %}
+=======
+</body>
+</html>
+>>>>>>> Stashed changes

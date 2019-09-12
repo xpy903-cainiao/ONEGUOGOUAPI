@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('',views.index,name=''),
     path('api/',include(api_router.urls)),
+
 ]
