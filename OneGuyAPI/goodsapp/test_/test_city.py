@@ -3,38 +3,53 @@ import unittest
 import random
 from unittest import TestCase
 
-class CityTestCase(unittest.TestCase):
-    def test_01_all_city(self):
+class TestCase(unittest.TestCase):
+    def test_01_goods(self):
         url = 'http://localhost:8000/api/goods/'
         resp = requests.get(url)
-
-        # city_list = resp.json().get('data')
-        # city = random.choice(city_list)
-
-        # self.city_id = city['id']
-        # print('_____.._____',city['city_name'])
         print(str(resp.content,encoding='utf-8'))
-    def test_02_city_area(self):
+    def test_02_goodscart(self):
         url = 'http://localhost:8000/api/goodscart'
-        # url = 'http://localhost:8000/api/goodscart?one_id=%s'
-        # resp = requests.get(url,{
-        #     'one_id':self.city_id
-        # })
-        # area_list = resp.json().get('data')
-        # area = random.choice(area_list)
-        # print('____..____',)
-        #
-        # self.area_id = area['id']
+        resp = requests.get(url)
+        print(str(resp.content,encoding='utf-8'))
+
+    def test_03_address(self):
+        url = 'http://localhost:8000/api/address'
+        resp = requests.get(url)
+        print(str(resp.content,encoding='utf-8'))
+
+    def test_04_orderdetail(self):
+        url = 'http://localhost:8000/api/orderdetail'
+        resp = requests.get(url)
+        print(str(resp.content,encoding='utf-8'))
+
+    def test_05_comment(self):
+        url = 'http://localhost:8000/api/comment'
+        resp = requests.get(url)
+        print(str(resp.content,encoding='utf-8'))
+
+    def test_06_city(self):
+        url = 'http://localhost:8000/api/city'
+        resp = requests.get(url)
+        print(str(resp.content,encoding='utf-8'))
+
+    def test_07_category(self):
+        url = 'http://localhost:8000/api/category'
+        resp = requests.get(url)
+        print(str(resp.content,encoding='utf-8'))
+
+    def test_08_nav(self):
+        url = 'http://localhost:8000/api/nav'
+        resp = requests.get(url)
+        print(str(resp.content,encoding='utf-8'))
+
+    def test_09_navinfo(self):
+        url = 'http://localhost:8000/api/navinfo'
         resp = requests.get(url)
         print(str(resp.content,encoding='utf-8'))
 
 if __name__ == '__main__':
     suite1 = unittest.TestSuite()
-    suite1.addTest(CityTestCase.test_dll_city)
-
-    suite2 = unittest.TestSuite()
-    suite2.addTest(CityTestCase.test_dll_area)
-
-    all_suite = unittest.TestSuite((suite1,suite2))
-
+    suite1.addTest(TestCase)
+    all_suite = unittest.TestSuite((suite1,))
     unittest.TextTestRunner().run(all_suite)

@@ -1,8 +1,12 @@
 from django.db import models
 
 # Create your models here.
+<<<<<<< HEAD
 
 
+
+=======
+>>>>>>> 655a439f66c130bd3f6a798490be3ba05a80f695
 
 class OneGuoUser(models.Model):
     level = (('0', '大众会员'),

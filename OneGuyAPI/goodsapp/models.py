@@ -2,6 +2,8 @@ from django.db import models
 from userapp.models import OneGuoUser
 
 
+from common import YGBaseModel
+
 # Create your models here.
 class GoodsModelEntity(models.Model):
     goods_type = models.IntegerField(verbose_name='商品分类')
@@ -53,7 +55,8 @@ class Goods_cartModelEntity(models.Model):
         verbose_name_plural = verbose_name = '购物车表'
 
 
-class Category(models.Model):
+class Category(YGBaseModel):
+
     code = models.CharField(max_length=20,
                             verbose_name='编码')
     name = models.CharField(max_length=20,

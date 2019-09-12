@@ -11,34 +11,23 @@ from orderapp.models import OrderModel, OrderDetailModel
 
 from django.views import View
 
-
-def goods_api():
-    data = GoodsModelEntity.objects.all()
-    datas = GoodsModelSerializer(data, many=True)
-    content = JSONRenderer().render(datas.data)
-    buffer = BytesIO(content)
-    text = JSONParser().parse(buffer)
-    return text
-
-
-def goods_cart_api():
-    data = Goods_cartModelEntity.objects.all()
-    datas = Goods_cartModelSerializer(data, many=True)
-    content = JSONRenderer().render(datas.data)
-    buffer = BytesIO(content)
-    text = JSONParser().parse(buffer)
-    return text
+class Goodscart_Api_View(View):
+    def get(self,request):
+        data = Goods_cartModelEntity.objects.all()
+        datas = Goods_cartModelSerializer(data, many=True)
+        return JsonResponse(datas.data, safe=False)
 
 
 class Goods_Api_View(View):
-    def get(self, request):
-        data = GoodsModelEntity.objects.all()
-        serialize = GoodsModelSerializer(data, many=True)
-        content = JSONRenderer().render(serialize.data)
-        buffer = BytesIO(content)
-        text = JSONParser().parse(buffer)
-        return JsonResponse(text, safe=False)
+    # def get(self, request):
+    #     data = GoodsModelEntity.objects.all()
+    #     serialize = GoodsModelSerializer(data, many=True)
+    #     return JsonResponse(serialize.data, safe=False)
 
+    def get(self,request):
+        goods_name = GoodsModelEntity.objects.get('goods_name')
+        serialize = GoodsModelSerializer(goods_name)
+        return JsonResponse(serialize.data, safe=False)
 
 class Order_Api_View(View):
     def get(self, request):
