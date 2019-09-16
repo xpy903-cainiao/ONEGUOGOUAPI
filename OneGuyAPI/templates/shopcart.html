@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="static/js/mui.min.js"></script>
+    <link href="static/css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+    	.title{
+    		text-align: center;
+    		font-size: 18px;
+    		margin-right: 10px;
+    	}
+    	.head{
+    		height: 60px;
+    		justify-content: center;
+    		display: flex;
+    		align-items: center;
+    		background: #fff;
+    		border-bottom: 1px solid #929292;
+    	}
+    	.item{
+    		height: 60px;
+    		background: lightskyblue;
+    		color: #000000;
+    		text-indent: 8px;
+    		line-height: 60px;
+    	}
+    	.cart{
+    		height: 200px;
+    		display: flex;
+    		flex-direction: column;
+    		align-items: center;
+    		justify-content: space-around;
+    			margin-top:90px ;
+    	}
+    	.bottom{
+
+    		width: 100%;
+    		display: flex;
+    		align-items: center;
+    		justify-content: space-between;
+    		position: fixed;
+    		bottom: 0;
+    		height: 60px;
+    		border-top: 1px solid #000;
+    	}
+    	.total{
+    		font-size: 13px;
+    		text-align: right;
+    	}
+    	.btn{
+    		width: 40%;
+    		background: yellowgreen;
+    		border: none;
+    	}
+    </style>
+</head>
+<body>
+	<div class="head">
+        <div class="title">登录可同步购物车内商品</div>
+<!--        <button type="button" class="mui-btn mui-btn-primary"  onclick="toLoad()" href="http://127.0.0.1:8000/user/login/-->
+<!--">登录</button>-->
+        <input type="button" name="reg" value="登陆" onclick="document.location.href='login'">
+
+    </div>
+    <div id="" class="item">
+    	全场满100元包邮，还差<b style="color: red;">100.00</b>元包邮
+    </div>
+
+
+    <!--购物车为空-->
+    <div id="" class="cart">
+    	<div class="content">
+    		购物车空空的，快去逛逛吧
+    	</div>
+    	<button type="button" class="mui-btn mui-btn-primary btn" onclick="first()">去逛逛</button>
+    	<div>-- 猜你喜欢 --</div>
+    </div>
+
+    <!--购物车不为空-->
+    <div class="goodlist">
+
+    </div>
+
+	<div class="bottom">
+		<div class="mui-input-row mui-radio">
+			<label>全选</label>
+			<input name="radio1" type="radio">
+		</div>
+		<div class="total">
+			<div>合计（不含运费）：￥0.00</div>
+			<div>已优惠 ￥0.00</div>
+		</div>
+		<div class="right">去结算（0）</div>
+	</div>
+</body>
+</html>
+<script>
+	function toLoad(){
+		window.location.href='123.html'
+	}
+	function first(){
+		window.location.href='index_m.html'
+	}
+</script>

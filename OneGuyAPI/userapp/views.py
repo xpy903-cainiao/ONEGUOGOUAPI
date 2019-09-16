@@ -56,7 +56,7 @@ def logout(request):
 def register(request):
     if request.session.get('is_login', None):
         # 限制重复登录
-        return redirect('index.html')
+        return redirect('index_m.html')
     if request.method == 'POST':
         # post请求
         message = '请检查填写的内容'

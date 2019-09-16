@@ -20,22 +20,21 @@ from django.urls import path, include
 from api import api_router
 from userapp.views import LoginView
 
-
+from mainapp.views import IndexView
 from django.urls import path, include
 from goodsapp import views
 from api_view import goods_api
 from django.conf.urls.static import static
 from django.conf import settings
-
 from api import api_router
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
+    path('goodsshop/',include('goodsapp.urls',namespace='goodsshop')),
     path('user/', include('userapp.urls', namespace='user')),
     path('api/', include(api_router.urls)),
 
-    # path('',views.index,name=''),
+    path('',IndexView.as_view(),name='index'),
 
     path('api/',include(api_router.urls)),
     path('goodsapi/',goods_api.Goods_Api_View.as_view(),name='goodsapi'),

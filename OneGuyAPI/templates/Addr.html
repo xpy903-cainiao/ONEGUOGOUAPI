@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>收货地址</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
+</head>
+<style>
+    #r1 {
+        position: absolute;
+        margin-left: 475px;
+        margin-top: 150px;
+    }
+
+    .d1 {
+        width: 40%;
+        border: 1px solid;
+        border-color: yellowgreen;
+        margin-top: 10%;
+        margin-left: 30%;
+        margin-right: 40%;
+    }
+
+    tr {
+        position: relative;
+        margin: 5px;
+    }
+
+    input {
+        height: 20px;
+        width: 230px;
+        padding-left: 5px;
+    }
+</style>
+<body>
+<div class="d1">
+    <div>
+        <a class="close"></a>
+    </div>
+    <div class="dropdown-header">
+        <span id="r1" class="glyphicon glyphicon-remove" style="color: rgb(64, 183, 72); font-size: 20px;"
+              onclick=javascrtpt:login()></span>
+        <h3 style="color: green">使用新地址</h3>
+
+        <table class="table">
+
+            <tbody>
+            <tr>
+                <td>收货人姓名：</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>手机号码：</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>收货地址：</td>
+                <td><select>
+                    <option>选择省份</option>
+                </select><select>
+                    <option>选择城市</option>
+                </select><select>
+                    <option>选择区域</option>
+                </select>
+
+            </tr>
+            <tr>
+                <td>详细地址：</td>
+                <td><input type="text"></td>
+                </td>
+            </tr>
+            <tr>
+                <td>固定电话：</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>邮政编码：</td>
+                <td><input type="text"></td>
+            </tr>
+            </tbody>
+        </table>
+        <div>
+
+        </div>
+        <div class="btn1">
+            <button id="b1" type="button" class="btn btn-success" onclick=javascrtpt:jump()>保存并添加</button>
+        </div>
+    </div>
+</div>
+<script>
+    function jump() {
+        window.location.href = 'index_m.html'
+    }
+    function login() {
+        window.location.href = 'goodscart.html'
+    }
+</script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/jquery.min.js"></script>
+</body>
+</html>
