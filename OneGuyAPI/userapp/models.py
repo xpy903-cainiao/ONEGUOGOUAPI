@@ -2,11 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-
-
-
-
-
 class OneGuoUser(models.Model):
     level = (('0', '大众会员'),
              ('1', '白银会员'),
